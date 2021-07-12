@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Excel Clone</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+	<!-- Font-awesome -->
+  	<script src="https://use.fontawesome.com/07d62e5a9f.js"></script>
+  	<!-- Google icons -->
+  	<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+  	<link rel="icon" href="images/logo.png">
+
+  	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+  	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+
+<body>
+
+	<div class="mycontainer">
+
+		<div class="logo-image"></div>
+
+		<div class="navigation">
+			
+			<div class="title-section">
+				
+				<div contenteditable="true" class="title" title="Edit" spellCheck="false">Untitled Spreadsheet</div>
+
+			</div>
+
+
+			<div class="menu-bar-section">
+
+				<div>File</div>
+				<div>Home</div>
+				<div>View</div>
+				<div>Tools</div>
+				<div>Help</div>
+
+			</div>
+
+
+
+
+			
+
+		</div>
+
+		<div class="menu-options-section">
+
+			<div class="menu-options-icon material-icons">content_cut</div>
+			<div class="menu-options-icon material-icons">content_copy</div>
+			<div class="menu-options-icon material-icons">content_paste</div>
+			<select name="font-size" class="font-size-menu" title="font-size">
+				<option class="options">8</option>
+				<option class="options">10</option>
+				<option class="options">12</option>
+				<option class="options">14</option>
+				<option class="options">16</option>
+				<option class="options">20</option>
+			</select>
+			<div class="menu-options-icon material-icons">format_bold</div>
+			<div class="menu-options-icon material-icons">format_italic</div>
+			<div class="menu-options-icon material-icons">format_underlined</div>
+			<div class="menu-options-icon material-icons">format_align_left</div>
+			<div class="menu-options-icon material-icons">format_align_center</div>
+			<div class="menu-options-icon material-icons">format_align_right</div>
+			<div class="menu-options-icon material-icons">format_color_fill</div>
+			<div class="menu-options-icon material-icons">format_color_text</div>
+
+        </div>
+
+
+        <div class="formula-section">
+            <div class="selected-cell-div"></div>
+            <div class="fx">fx</div>
+            <input type="text" class="formula-input-section">
+        </div>
+
+        <div class="grid">
+        	
+        	 <div class="blank-corner"></div>
+
+            <div class="row-number-section">
+            </div>
+
+            <div class="column-tag-section"></div>
+
+            <div class="cell-section"></div>
+
+        </div>
+        
+
+
+        <div class="sheets-section"></div>
+
+
+
+        <!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-share-square-o" aria-hidden="true"></i> Share with people and groups
+				</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <input type="text" value="https://www.pepcoding.com/" id="myInput">
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" onclick="myFunction()"><span class="material-icons">content_copy</span></button>
+		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+
+*{
+	box-sizing: border-box !important;
+}
+
+body{
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.mycontainer {
+	height: 100vh;
+	width: 100vw;
+}
+
+.mycontainer .logo-image {
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	background-image: url("images/logo.png");
+	top: calc(4.5vh - 24px);
+	left: 2px;
+	z-index: 5;
+}
+
+.title-section {
+	height: 5vh;
+	display: flex;
+	margin-left: 50px;
+}
+
+.title-section .title {
+	margin-top: 3px;
+	height: 4vh;
+	width: auto;
+	font-size: 16px;
+	color: #7C9473;
+	outline:  none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.title-section .title:hover {
+	color: white;
+	background-color: #CDD0CB;
+}
+
+
+.selected {
+	background-color: #dadce0;
+}
+
+
+
+.navigation {
+	height: 9vh;
+	width: 100vw;
+	position: relative;
+	background-color: white;
+}
+
+.navigation .additional-options {
+	position: absolute;
+	height: 9vh;
+	width: 18rem;
+	right: 0px;
+	top: 0px;
+	background-color: white;
+	display: flex;
+}
+
+
+.additional-options .btns {
+	height: 100%;
+	width: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.additional-options .comments {
+	padding: 10px;
+}
+
+.additional-options .comments:hover {
+	background-color: #CDD0CB;
+	border-radius: 50%;
+}
+
+.additional-options .user {
+	border-radius: 50%;
+}
+
+
+.navigation .mobile-menu {
+	position: absolute;
+	top: 4.5vh;
+	right: 0px;
+	transform: translate(-20%, -50%);
+}
+
+.navigation .mobile-menu-options {
+	position: absolute;
+	top: 9vh;
+	right: 0px;
+	width: 7rem;
+	border: 1px solid #CDD0CB;
+	z-index: 5;
+}
+
+.mobile-menu-options button {
+	border: none;
+}
+
+
+
+#myInput {
+	outline: none;
+	border: none;
+	height: 100%;
+	width: 100%;
+}
+
+.mycontainer .card {
+	position: absolute;
+	width: 16rem;
+	height: auto;
+	top: 9vh;
+	right: 0px;
+	z-index: 5;
+}
+
+
+/*notes section*/
+
+#task {
+	height: 100%;
+	width: 80%;
+	outline: none;
+}
+
+#add-task {
+	height: 100%;
+	border-radius: 50%;
+	margin-left: 5px;
+}
+
+.tasks-container {
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.userInfo {
+	text-align: center;
+}
+
+.card .close {
+	float: right;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*file view .... etc. */ 
+.menu-bar-section {
+	height: 4vh;
+	display: flex;
+	align-items: center;
+	margin-left: 50px;
+}
+
+.menu-bar-section div {
+	padding: 8px 25px 8px 25px;
+	margin-right: 2vw;
+	font-size: 13px;
+	width: 6vh;
+	height: 4vh;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.menu-bar-section div:hover {
+	background-color: #dadce0;
+}
+
+.menu-options-section {
+    height: 6vh;
+    border: 1px solid;
+    border-color: #CDD0CB;
+    background-color: white;
+    display: flex;
+}
+
+.menu-options-icon {
+	height: 6vh;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 18px !important;
+}
+
+.menu-options-icon:hover {
+	background-color: #dadce0;
+	cursor: pointer;
+}
+
+.font-size-menu {
+	outline: none;
+	border: none;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-width: 50%;
+    border-color: #CDD0CB;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.formula-section {
+    height: 4%;
+    display: flex;
+    border: none;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #CDD0CB;
+    background-color: white;
+}
+
+.formula-section .selected-cell-div {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fx {
+	height: 100%;
+	width: 6%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "cursive", Lucida Handwriting;
+    font-size: 16px;
+    color: #7C9473;
+    border: none;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #CDD0CB;
+}
+
+.formula-section input {
+    display: block;
+    width: 84%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 1%;
+    font-size: 14px;
+}
+
+.grid{
+    height: 75%;
+    overflow: auto;
+    position: relative;
+}
+
+.blank-corner {
+	width: 50px;
+	height: 25px;
+	background-color: #F4F6F6;
+	border: none;
+	border-bottom: 5px solid #6E7C7C;
+	border-right: 5px solid #6E7C7C;
+	position: fixed;
+	top: 19vh;
+	left: 0;
+}
+
+.row-number-section {
+	display: inline-block;
+	position: fixed;
+	top: calc(19vh + 25px);
+	left: 0;
+	z-index: -10;
+}
+
+.row-number {
+  height: 25px;
+  width: 50px;
+  background-color: #F4F6F6;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #CDD0CB;
+  font-size: 13px;
+}
+
+.column-tag-section {
+	position: fixed;
+	top: 19vh;
+	left: 50px;
+	height: 25px;
+	width: 100vw;
+	display: flex;
+	z-index: -10;
+}
+
+.column-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  flex-shrink: 0;
+  height: 25px;
+  background-color: #F4F6F6;
+  border: none;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #CDD0CB;
+  color: black;
+  font-size: 13px;
+}
+
+.sheets-section {
+    height: 6vh;
+    background-color: #CDD0CB;
+}
+
+
+
+.cell-section {
+  height: calc(75vh - 25px);
+  width: calc(100vw - 50px);
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  overflow: auto;
+}
+
+.myrow {
+	display: flex;
+}
+
+.mycell {
+	height: 25px;
+	width: 100px;
+	border: none;
+	border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #CDD0CB;
+    flex-shrink: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    font-family: Arial;
+    font-style: normal;
+}
+
+.selected-cell {
+	border: 2px solid #1a73e8;;
+}
