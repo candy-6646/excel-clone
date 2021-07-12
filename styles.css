@@ -206,6 +206,7 @@ body{
     border-color: #CDD0CB;
     background-color: white;
     display: flex;
+    overflow: auto;
 }
 
 .menu-options-icon {
