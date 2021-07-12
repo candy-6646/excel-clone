@@ -230,9 +230,10 @@ body{
 	border-right: 1px solid;
 	border-left: 1px solid;
 	border-width: 50%;
-    border-color: #CDD0CB;
-    cursor: pointer;
-    font-size: 15px;
+        border-color: #CDD0CB;
+        cursor: pointer;
+        font-size: 15px;
+        background-color: white;
 }
 
 .formula-section {
