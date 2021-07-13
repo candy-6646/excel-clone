@@ -243,6 +243,7 @@ body{
 .font-menu {
 	height: 4vh;
 	width: 120px;
+	background-color: white;
 	outline: none;
 	border: none;
 	border-right: 1px solid;
@@ -263,7 +264,6 @@ body{
 
 .options {
 	width: auto;
-	/*margin: 20px;*/
 }
 
 .f1 {
@@ -291,17 +291,21 @@ body{
 	font-family: Papyrus,fantasy;
 }
 
-
 .f7 {
+	font-family: fangsong;
+}
+
+
+.f8 {
 	font-family: Copperplate,fantasy;
 }
 
-.f8 {
+.f9 {
 	font-family: 'Lucida Handwriting',cursive;
 }
 
-.f9 {
- 	font-family: 'Qahiri', sans-serif;
+.f10 {
+ 	font-family: 'Zen Tokyo Zoo', cursive;
  }
 
 
@@ -503,7 +507,7 @@ body{
     font-size: 14px;
     color: rgb(0, 0, 0);
     font-weight: normal;
-    font-family: Arial;
+    font-family: 'Noto Sans', sans-serif;
     font-style: normal;
 }
 

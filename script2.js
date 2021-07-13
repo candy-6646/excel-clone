@@ -355,12 +355,32 @@ if(window.orientation > -1 || w < 700) {
 	
 
 
-let fontFamilyMenu = document.querySelectorAll(".options");
-for(let i = 0; i < 9; i++) {
-	console.log(fontFamilyMenu[i]);
-	fontFamilyMenu[i].addEventListener("click", function(e){
-		console.log(fontFamilyMenu[i].classList[1])
-	});
-}
+let fontFamilyMenu = document.querySelector(".font-style");
+fontFamilyMenu.addEventListener("change", function(e){
+	if(lastCell) {
+		let newFont = e.currentTarget.value;
+		if(newFont == "f1") {
+			lastCell.style.fontFamily = "'Noto Sans', sans-serif";
+		}else if(newFont == "f2") {
+			lastCell.style.fontFamily = "Arial, Helvetica, sans-serif";
+		}else if (newFont == "f3") {
+			lastCell.style.fontFamily = "'Caladea', serif";
+		}else if (newFont == "f4") {
+			lastCell.style.fontFamily = "'Brush Script MT',cursive";
+		}else if (newFont == "f5") {
+			lastCell.style.fontFamily = "Georgia,serif";
+		}else if (newFont == "f6") {
+			lastCell.style.fontFamily = "Papyrus,fantasy";
+		}else if(newFont == "f7"){
+			lastCell.style.fontFamily = "fangsong";
+		}else if (newFont == "f8") {
+			lastCell.style.fontFamily = "Copperplate,fantasy";
+		}else if (newFont == "f9") {
+			lastCell.style.fontFamily = "'Lucida Handwriting',cursive";
+		}else if (newFont == "f10") {
+			lastCell.style.fontFamily = "'Zen Tokyo Zoo', cursive";
+		}
+	}
+});
 
 
