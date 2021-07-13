@@ -355,3 +355,12 @@ if(window.orientation > -1 || w < 700) {
 	
 
 
+let fontFamilyMenu = document.querySelectorAll(".options");
+for(let i = 0; i < 9; i++) {
+	console.log(fontFamilyMenu[i]);
+	fontFamilyMenu[i].addEventListener("click", function(e){
+		console.log(fontFamilyMenu[i].classList[1])
+	});
+}
+
+

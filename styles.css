@@ -66,8 +66,8 @@ body{
 .navigation .additional-options {
 	position: absolute;
 	height: 9vh;
-	width: 18rem;
-	right: 0px;
+	width: 14rem;
+	right: 10px;
 	top: 0px;
 	background-color: white;
 	display: flex;
@@ -76,14 +76,29 @@ body{
 
 .additional-options .btns {
 	height: 100%;
-	width: 6rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+.additional-options > div:nth-child(1) {
+	width: 4rem;
+}
+
+.additional-options > div:nth-child(2) {
+	width: 6rem;
+}
+
+.additional-options > div:nth-child(3) {
+	width: 4rem;
+}
+
 .additional-options .comments {
 	padding: 10px;
+}
+
+.additional-options .share {
+	font-size: 15px;
 }
 
 .additional-options .comments:hover {
@@ -206,6 +221,8 @@ body{
     border-color: #CDD0CB;
     background-color: white;
     display: flex;
+    align-items: center;
+    overflow: auto;
 }
 
 .menu-options-icon {
@@ -213,8 +230,8 @@ body{
 	display: flex !important;
 	justify-content: center;
 	align-items: center;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
 	font-size: 18px !important;
 }
 
@@ -223,7 +240,9 @@ body{
 	cursor: pointer;
 }
 
-.font-size-menu {
+.font-menu {
+	height: 4vh;
+	width: 120px;
 	outline: none;
 	border: none;
 	border-right: 1px solid;
@@ -232,7 +251,59 @@ body{
     border-color: #CDD0CB;
     cursor: pointer;
     font-size: 15px;
+    padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
+
+.font-size {
+	width: 60px;
+}
+
+.options {
+	width: auto;
+	/*margin: 20px;*/
+}
+
+.f1 {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.f2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.f3 {
+	font-family: 'Caladea', serif;
+}
+
+.f4 {
+	font-family: 'Brush Script MT',cursive;
+}
+
+
+.f5 {
+	font-family: Georgia,serif;
+}
+
+.f6 {
+	font-family: Papyrus,fantasy;
+}
+
+
+.f7 {
+	font-family: Copperplate,fantasy;
+}
+
+.f8 {
+	font-family: 'Lucida Handwriting',cursive;
+}
+
+.f9 {
+ 	font-family: 'Qahiri', sans-serif;
+ }
+
 
 .formula-section {
     height: 4%;
@@ -347,7 +418,60 @@ body{
 
 .sheets-section {
     height: 6vh;
-    background-color: #CDD0CB;
+    background-color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    border: none;
+	border-top: 1px solid #CDD0CB;
+}
+
+.sheets-section .scroller {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	margin-left: 5px;
+}
+
+.sheets-section .addBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2rem;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.sheets-section .sheets-tab {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 30rem;
+	overflow: auto;
+	margin-left: 5px;
+}
+
+.sheets-section .sheets-tab .sheet {
+	height: 4vh;
+	width: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #EEEEEE;
+	color: #064420;
+	margin-right: 8px;
+	border: none;
+	border-right: 1px solid #CDD0CB;
+	border-left: 1px solid #CDD0CB;
+}
+
+.left, .right, .sheet , .addBtn:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.sheets-section .sheets-tab .sheet:hover {
+	background-color: white;
 }
 
 
