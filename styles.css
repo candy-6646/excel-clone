@@ -309,6 +309,7 @@ body{
  }
 
 
+
 .formula-section {
     height: 4%;
     display: flex;
@@ -505,10 +506,7 @@ body{
     display: flex;
     align-items: center;
     font-size: 14px;
-    color: rgb(0, 0, 0);
-    font-weight: normal;
     font-family: 'Noto Sans', sans-serif;
-    font-style: normal;
 }
 
 .selected-cell {

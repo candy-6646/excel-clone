@@ -43,7 +43,7 @@
 			
 			<div class="title-section">
 				
-				<div contenteditable="true" class="title" title="Edit" spellCheck="false">Untitled Spreadsheet</div>
+				<div contenteditable="true" class="title" title="Edit" data-bs-toggle="tooltip" data-bs-placement="right" spellCheck="false">Untitled Spreadsheet</div>
 
 			</div>
 
@@ -81,23 +81,28 @@
 				<option class="options f8" value="f8">Impact</option>
 				<option class="options f9" value="f9">Lucida Handwriting</option>
 				<option class="options f10" value="f10">Zen Tokyo Zoo
-</option>
+				</option>
 			</select>
 			<select name="font-size" class="font-menu font-size" title="font-size">
-				<option class="options">8</option>
-				<option class="options">10</option>
-				<option class="options">12</option>
-				<option class="options">14</option>
-				<option class="options">16</option>
-				<option class="options">20</option>
+				<option class="options" value="8">8</option>
+				<option class="options" value="10">10</option>
+				<option class="options" value="12">12</option>
+				<option class="options" value="14">14</option>
+				<option class="options" value="16">16</option>
+				<option class="options" value="20">20</option>
+				<option class="options" value="22">22</option>
 			</select>
-			<div class="menu-options-icon material-icons">format_bold</div>
-			<div class="menu-options-icon material-icons">format_italic</div>
-			<div class="menu-options-icon material-icons">format_underlined</div>
-			<div class="menu-options-icon material-icons">format_align_left</div>
-			<div class="menu-options-icon material-icons">format_align_center</div>
-			<div class="menu-options-icon material-icons">format_align_right</div>
-			<div class="menu-options-icon material-icons">format_color_fill</div>
+			<div class="menu-options-icon material-icons boldBtn">format_bold</div>
+			<div class="menu-options-icon material-icons italicBtn">format_italic</div>
+			<div class="menu-options-icon material-icons underlineBtn">format_underlined</div>
+			<div class="menu-options-icon material-icons align left">format_align_left</div>
+			<div class="menu-options-icon material-icons align center">format_align_center</div>
+			<div class="menu-options-icon material-icons align right">format_align_right</div>
+
+			<div class="menu-options-icon material-icons color-fill">
+			    format_color_fill
+			</div>
+			
 			<div class="menu-options-icon material-icons">format_color_text</div>
 
         </div>
@@ -133,8 +138,6 @@
         	<div class="sheets-tab">
         		<div class="sheet">Sheet 1</div>
         		<div class="sheet">Sheet 2</div>
-        		<div class="sheet">Sheet 3</div>
-        		<div class="sheet">Sheet 4</div>
         	</div>
         </div>
 

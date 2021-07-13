@@ -384,3 +384,94 @@ fontFamilyMenu.addEventListener("change", function(e){
 });
 
 
+let fonSizeMenu = document.querySelector(".font-size");
+fonSizeMenu.addEventListener("change", function(e){
+	let newFontSize = e.currentTarget.value;
+
+	if(newFontSize == "8") {
+		lastCell.style.fontSize = "8px";
+	}else if (newFontSize == "10") {
+		lastCell.style.fontSize = "10px";
+	}else if(newFontSize == "12") {
+		lastCell.style.fontSize = "12px";
+	}else if(newFontSize == "14") {
+		lastCell.style.fontSize = "14px";
+	}else if(newFontSize == "16") {
+		lastCell.style.fontSize = "16px";
+	}else if(newFontSize == "20") {
+		lastCell.style.fontSize = "20px";
+	}else if(newFontSize == "22"){
+		lastCell.style.fontSize = "22px";
+	}
+})
+
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
+
+let alignButtons = document.querySelectorAll(".align");
+for(let i = 0; i < 3; i++) {
+	alignButtons[i].addEventListener("click", function(e){
+
+		if(lastCell) {
+
+			if(e.currentTarget.classList[3] == "left") {
+				lastCell.style.justifyContent = "flex-start";
+			}else if(e.currentTarget.classList[3] == "right") {
+				lastCell.style.justifyContent = "flex-end";
+			}else if(e.currentTarget.classList[3] == "center") {
+				lastCell.style.justifyContent = "center";
+			}
+
+		}
+	});
+}
+
+let boldBtn = document.querySelector(".boldBtn");
+let bold = false;
+boldBtn.addEventListener("click", function(){
+	if(lastCell) {
+
+		if(bold) {
+			bold = false;
+			lastCell.style.fontWeight = "normal";
+		} else {
+			bold = true;
+			lastCell.style.fontWeight = "900";
+		}
+	}
+	
+});
+
+let italicBtn = document.querySelector(".italicBtn");
+let italic = false;
+
+italicBtn.addEventListener("click", function(){
+	if(lastCell) {
+		if(italic) {
+			italic = false;
+			lastCell.style.fontFamily = "'Noto Sans', sans-serif";
+		} else {
+			italic = true;
+			lastCell.style.fontFamily = "italic";
+		}
+
+	}
+});
+
+let underLinedBtn = document.querySelector(".underlineBtn");
+let underline = false;
+underLinedBtn.addEventListener("click", function(){
+	if(lastCell) {
+		if(underline) {
+			underline = false;
+			lastCell.style.textDecoration = "none";
+		} else {
+			underline = true
+			lastCell.style.textDecoration = "underline";
+		}
+	}
+});
