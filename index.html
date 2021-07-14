@@ -51,7 +51,6 @@
 			<div class="menu-bar-section">
 
 				<div>File</div>
-				<div>Home</div>
 				<div>View</div>
 				<div>Tools</div>
 				<div>Help</div>
@@ -67,10 +66,10 @@
 
 		<div class="menu-options-section">
 
-			<div class="menu-options-icon material-icons">content_cut</div>
-			<div class="menu-options-icon material-icons">content_copy</div>
-			<div class="menu-options-icon material-icons">content_paste</div>
-			<select name="font-style" class="font-menu font-style" title="font-style">
+			<div class="menu-options-icon material-icons" onclick="cutFunc()" >content_cut</div>
+			<div class="menu-options-icon material-icons" onclick="copyFunc()">content_copy</div>
+			<div class="menu-options-icon material-icons" onclick="pasteFunc()">content_paste</div>
+			<select name="font-style" class="font-menu font-style" title="font-style" data-bs-toggle="tooltip" data-bs-placement="bottom">
 				<option class="options f1" value="f1">Noto Sans</option>
 				<option class="options f2" value="f2">Arial</option>
 				<option class="options f3" value="f3">Caladea</option>
@@ -83,7 +82,7 @@
 				<option class="options f10" value="f10">Zen Tokyo Zoo
 				</option>
 			</select>
-			<select name="font-size" class="font-menu font-size" title="font-size">
+			<select name="font-size" class="font-menu font-size" title="font-size" data-bs-toggle="tooltip" data-bs-placement="bottom">
 				<option class="options" value="8">8</option>
 				<option class="options" value="10">10</option>
 				<option class="options" value="12">12</option>
@@ -92,6 +91,11 @@
 				<option class="options" value="20">20</option>
 				<option class="options" value="22">22</option>
 			</select>
+
+			<div class="menu-options-icon material-icons color-fill">
+			    format_color_fill
+			</div>			
+			<div class="menu-options-icon material-icons text-color">format_color_text</div>
 			<div class="menu-options-icon material-icons boldBtn">format_bold</div>
 			<div class="menu-options-icon material-icons italicBtn">format_italic</div>
 			<div class="menu-options-icon material-icons underlineBtn">format_underlined</div>
@@ -99,11 +103,6 @@
 			<div class="menu-options-icon material-icons align center">format_align_center</div>
 			<div class="menu-options-icon material-icons align right">format_align_right</div>
 
-			<div class="menu-options-icon material-icons color-fill">
-			    format_color_fill
-			</div>
-			
-			<div class="menu-options-icon material-icons">format_color_text</div>
 
         </div>
 
@@ -137,7 +136,6 @@
         	<div class="addBtn material-icons">add_circle</div>
         	<div class="sheets-tab">
         		<div class="sheet">Sheet 1</div>
-        		<div class="sheet">Sheet 2</div>
         	</div>
         </div>
 

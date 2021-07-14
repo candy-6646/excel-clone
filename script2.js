@@ -8,15 +8,10 @@ function myFunction() {
 	alert("Copied the text: " + copyText.value);
 }
 
-let homeBtn = document.querySelector(".menu-bar-section > div:nth-child(2)");
-homeBtn.classList.add("selected");
 
 let w = window.innerWidth;
 
 if(window.orientation > -1 || w < 700) {
-
-	let toolsDiv = document.querySelector(".menu-bar-section > div:nth-child(4)");
-	toolsDiv.remove();
 
 
 	let span  = document.createElement("span");
@@ -475,3 +470,216 @@ underLinedBtn.addEventListener("click", function(){
 		}
 	}
 });
+
+let colorFillBtn = document.querySelector(".color-fill");
+let bgColorDiv = false;
+colorFillBtn.addEventListener("click", function(){
+	let div = document.createElement("div");
+	div.classList.add("colors-options");
+	div.innerHTML = `<div class="color-row">
+					<div class="color c1"></div>
+					<div class="color c2"></div>
+					<div class="color c3"></div>
+					<div class="color c4"></div>
+				</div>
+				<div class="color-row">
+					<div class="color c5"></div>
+					<div class="color c6"></div>
+					<div class="color c7"></div>
+					<div class="color c8"></div>
+
+				</div>
+				<div class="color-row">
+					<div class="color c9"></div>
+					<div class="color c10"></div>
+					<div class="color c11"></div>
+					<div class="color c12"></div>
+				</div>
+				<div class="color-row">
+					<div class="color c13"></div>
+					<div class="color c14"></div>
+					<div class="color c15"></div>
+					<div class="color c16"></div>
+				</div>`;
+
+				let menuOptionsSection = document.querySelector(".menu-options-section");
+
+				if(bgColorDiv) {
+					bgColorDiv = false;
+					document.querySelector(".colors-options").remove();
+				} else {
+					if(document.querySelector(".colors-options")){
+						document.querySelector(".colors-options").remove();
+						textColorDiv = false;
+					}
+					bgColorDiv = true;
+					menuOptionsSection.append(div);
+
+					let allColorsBtn = document.querySelectorAll(".colors-options>div .color");
+
+					for(let i = 0; i < allColorsBtn.length; i++) {
+
+						allColorsBtn[i].addEventListener("click", function(e){
+							if(lastCell) {
+								if(e.currentTarget.classList[1] == "c1") {
+									lastCell.style.backgroundColor = "#171010";
+								}else if(e.currentTarget.classList[1] == "c2") {
+									lastCell.style.backgroundColor = "#CDC7BE";
+								}else if(e.currentTarget.classList[1] == "c3") {
+									lastCell.style.backgroundColor = "#EEEEEE";
+								}else if(e.currentTarget.classList[1] == "c4") {
+									lastCell.style.backgroundColor = "white";
+								}else if(e.currentTarget.classList[1] == "c5") {
+									lastCell.style.backgroundColor = "#50CB93";
+								}else if(e.currentTarget.classList[1] == "c6") {
+									lastCell.style.backgroundColor = "#71EFA3";
+								}else if(e.currentTarget.classList[1] == "c7") {
+									lastCell.style.backgroundColor = "#D9DD6B";
+								}else if(e.currentTarget.classList[1] == "c8") {
+									lastCell.style.backgroundColor = "#ECEFA4";
+								}else if(e.currentTarget.classList[1] == "c9") {
+									lastCell.style.backgroundColor = "#334257";
+								}else if(e.currentTarget.classList[1] == "c10") {
+									lastCell.style.backgroundColor = "#476072";
+								}else if(e.currentTarget.classList[1] == "c11") {
+									lastCell.style.backgroundColor = "#FFBCBC";
+								}else if(e.currentTarget.classList[1] == "c12") {
+									lastCell.style.backgroundColor = "#F08FC0";
+								}else if(e.currentTarget.classList[1] == "c13") {
+									lastCell.style.backgroundColor = "#D83A56";
+								}else if(e.currentTarget.classList[1] == "c14") {
+									lastCell.style.backgroundColor = "#FF616D";
+								}else if(e.currentTarget.classList[1] == "c15") {
+									lastCell.style.backgroundColor = "#54436B";
+								}else if(e.currentTarget.classList[1] == "c16") {
+									lastCell.style.backgroundColor = "#A03C78";
+								}
+
+							}
+
+						});
+
+					}
+				}
+
+});
+
+let textColorFillBtn = document.querySelector(".text-color");
+let textColorDiv = false;
+textColorFillBtn.addEventListener("click", function(){
+	let div = document.createElement("div");
+	div.classList.add("colors-options");
+	div.classList.add("text-color-options");
+	div.innerHTML = `<div class="color-row">
+					<div class="color c1"></div>
+					<div class="color c2"></div>
+					<div class="color c3"></div>
+					<div class="color c4"></div>
+				</div>
+				<div class="color-row">
+					<div class="color c5"></div>
+					<div class="color c6"></div>
+					<div class="color c7"></div>
+					<div class="color c8"></div>
+
+				</div>
+				<div class="color-row">
+					<div class="color c9"></div>
+					<div class="color c10"></div>
+					<div class="color c11"></div>
+					<div class="color c12"></div>
+				</div>
+				<div class="color-row">
+					<div class="color c13"></div>
+					<div class="color c14"></div>
+					<div class="color c15"></div>
+					<div class="color c16"></div>
+				</div>`;
+
+				let menuOptionsSection = document.querySelector(".menu-options-section");
+
+				if(textColorDiv) {
+					textColorDiv = false;
+					document.querySelector(".text-color-options").remove();
+				} else {
+
+					if(document.querySelector(".colors-options")){
+						document.querySelector(".colors-options").remove();
+						bgColorDiv = false;
+					}
+					textColorDiv = true;
+					menuOptionsSection.append(div);
+
+					let allColorsBtn = document.querySelectorAll(".colors-options>div .color");
+
+					for(let i = 0; i < allColorsBtn.length; i++) {
+
+						allColorsBtn[i].addEventListener("click", function(e){
+							if(lastCell) {
+								if(e.currentTarget.classList[1] == "c1") {
+									lastCell.style.color = "#171010";
+								}else if(e.currentTarget.classList[1] == "c2") {
+									lastCell.style.color = "#CDC7BE";
+								}else if(e.currentTarget.classList[1] == "c3") {
+									lastCell.style.color = "#EEEEEE";
+								}else if(e.currentTarget.classList[1] == "c4") {
+									lastCell.style.color = "white";
+								}else if(e.currentTarget.classList[1] == "c5") {
+									lastCell.style.color = "#50CB93";
+								}else if(e.currentTarget.classList[1] == "c6") {
+									lastCell.style.color = "#71EFA3";
+								}else if(e.currentTarget.classList[1] == "c7") {
+									lastCell.style.color = "#D9DD6B";
+								}else if(e.currentTarget.classList[1] == "c8") {
+									lastCell.style.color = "#ECEFA4";
+								}else if(e.currentTarget.classList[1] == "c9") {
+									lastCell.style.color = "#334257";
+								}else if(e.currentTarget.classList[1] == "c10") {
+									lastCell.style.color = "#476072";
+								}else if(e.currentTarget.classList[1] == "c11") {
+									lastCell.style.color = "#FFBCBC";
+								}else if(e.currentTarget.classList[1] == "c12") {
+									lastCell.style.color = "#F08FC0";
+								}else if(e.currentTarget.classList[1] == "c13") {
+									lastCell.style.color = "#D83A56";
+								}else if(e.currentTarget.classList[1] == "c14") {
+									lastCell.style.color = "#FF616D";
+								}else if(e.currentTarget.classList[1] == "c15") {
+									lastCell.style.color = "#54436B";
+								}else if(e.currentTarget.classList[1] == "c16") {
+									lastCell.style.color = "#A03C78";
+								}
+
+							}
+
+						});
+
+					}
+				}
+});
+
+
+//cut function
+function cutFunc() {
+	if(lastCell) {
+		let text = lastCell.innerText;
+		lastCell.innerText = "";
+		navigator.clipboard.writeText(text);
+	}
+}
+
+//copy function
+function copyFunc() {
+	if(lastCell) {
+		let text = lastCell.innerText;
+		navigator.clipboard.writeText(text);
+	}
+}
+
+//paste func
+function pasteFunc() {
+	if(lastCell) {
+		let text = navigator.clipboard.readText();
+		text.then(txt => { lastCell.innerText = txt; });
+	}
+}

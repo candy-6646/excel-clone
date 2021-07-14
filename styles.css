@@ -266,6 +266,107 @@ body{
 	width: auto;
 }
 
+.menu-options-section .colors-options {
+	position: absolute;
+	left: 315px;
+	top: 15vh;
+	height: 8rem;
+	width: 8rem;
+	z-index: 5;
+	background-color: white;
+	border: 0.5px solid #CDD0CB;
+}
+
+.menu-options-section .text-color-options {
+	left: 357px;
+}
+
+.colors-options .color-row {
+	height: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.colors-options .color {
+	height: 1.2rem;
+	width: 1.2rem;
+	border: 0.5px solid #CDD0CB;
+	margin-left: 6px;
+	margin-right: 6px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.colors-options .color:hover {
+	box-sizing: content-box;
+	border: 2px solid black;
+}
+
+.c1 {
+	background-color: #171010;
+}
+
+.c2 {
+	background-color: #CDC7BE;
+}
+
+.c3 {
+	background-color: #EEEEEE;
+}
+
+.c4 {
+	background-color: white;
+}
+
+.c5 {
+	background-color: #50CB93;
+}
+
+.c6 {
+	background-color: #71EFA3;
+}
+
+.c7 {
+	background-color: #D9DD6B;
+}
+
+.c8 {
+	background-color: #ECEFA4;
+}
+
+.c9 {
+	background-color: #334257;
+}
+
+.c10 {
+	background-color: #476072;
+}
+
+.c11 {
+	background-color: #FFBCBC;
+}
+
+.c12 {
+	background-color: #F08FC0;
+}
+
+.c13 {
+	background-color: #D83A56;
+}
+
+.c14 {
+	background-color: #FF616D;
+}
+
+.c15 {
+	background-color: #54436B;
+}
+
+.c16 {
+	background-color: #A03C78;
+}
+
+
 .f1 {
 	font-family: 'Noto Sans', sans-serif;
 }
@@ -507,6 +608,7 @@ body{
     align-items: center;
     font-size: 14px;
     font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
 }
 
 .selected-cell {
