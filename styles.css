@@ -268,7 +268,7 @@ body{
 
 .menu-options-section .colors-options {
 	position: absolute;
-	left: 315px;
+	left: 127px;
 	top: 15vh;
 	height: 8rem;
 	width: 8rem;
@@ -278,7 +278,7 @@ body{
 }
 
 .menu-options-section .text-color-options {
-	left: 357px;
+	left: 169px;
 }
 
 .colors-options .color-row {

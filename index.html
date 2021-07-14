@@ -43,7 +43,7 @@
 			
 			<div class="title-section">
 				
-				<div contenteditable="true" class="title" title="Edit" data-bs-toggle="tooltip" data-bs-placement="right" spellCheck="false">Untitled Spreadsheet</div>
+				<div contenteditable="true" class="title" title="Edit" data-bs-toggle="tooltip" data-bs-placement="bottom" spellCheck="false">Untitled Spreadsheet</div>
 
 			</div>
 
@@ -66,10 +66,20 @@
 
 		<div class="menu-options-section">
 
-			<div class="menu-options-icon material-icons" onclick="cutFunc()" >content_cut</div>
-			<div class="menu-options-icon material-icons" onclick="copyFunc()">content_copy</div>
-			<div class="menu-options-icon material-icons" onclick="pasteFunc()">content_paste</div>
-			<select name="font-style" class="font-menu font-style" title="font-style" data-bs-toggle="tooltip" data-bs-placement="bottom">
+			<div class="menu-options-icon material-icons boldBtn">format_bold</div>
+			<div class="menu-options-icon material-icons italicBtn">format_italic</div>
+			<div class="menu-options-icon material-icons underlineBtn">format_underlined</div>
+
+			<div class="menu-options-icon material-icons color-fill">
+			    format_color_fill
+			</div>			
+			<div class="menu-options-icon material-icons text-color">format_color_text</div>
+			
+			<div class="menu-options-icon material-icons align left">format_align_left</div>
+			<div class="menu-options-icon material-icons align center">format_align_center</div>
+			<div class="menu-options-icon material-icons align right">format_align_right</div>
+
+			<select name="font-style" class="font-menu font-style" title="font" data-bs-toggle="tooltip" data-bs-placement="bottom">
 				<option class="options f1" value="f1">Noto Sans</option>
 				<option class="options f2" value="f2">Arial</option>
 				<option class="options f3" value="f3">Caladea</option>
@@ -92,16 +102,11 @@
 				<option class="options" value="22">22</option>
 			</select>
 
-			<div class="menu-options-icon material-icons color-fill">
-			    format_color_fill
-			</div>			
-			<div class="menu-options-icon material-icons text-color">format_color_text</div>
-			<div class="menu-options-icon material-icons boldBtn">format_bold</div>
-			<div class="menu-options-icon material-icons italicBtn">format_italic</div>
-			<div class="menu-options-icon material-icons underlineBtn">format_underlined</div>
-			<div class="menu-options-icon material-icons align left">format_align_left</div>
-			<div class="menu-options-icon material-icons align center">format_align_center</div>
-			<div class="menu-options-icon material-icons align right">format_align_right</div>
+
+			<div class="menu-options-icon material-icons" onclick="cutFunc()" >content_cut</div>
+			<div class="menu-options-icon material-icons" onclick="copyFunc()">content_copy</div>
+			<div class="menu-options-icon material-icons" onclick="pasteFunc()">content_paste</div>
+			
 
 
         </div>

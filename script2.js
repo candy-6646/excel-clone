@@ -507,13 +507,16 @@ colorFillBtn.addEventListener("click", function(){
 				if(bgColorDiv) {
 					bgColorDiv = false;
 					document.querySelector(".colors-options").remove();
+					colorFillBtn.classList.remove("selected");
 				} else {
 					if(document.querySelector(".colors-options")){
 						document.querySelector(".colors-options").remove();
 						textColorDiv = false;
+						textColorFillBtn.classList.remove("selected");
 					}
 					bgColorDiv = true;
 					menuOptionsSection.append(div);
+					colorFillBtn.classList.add("selected");
 
 					let allColorsBtn = document.querySelectorAll(".colors-options>div .color");
 
@@ -601,14 +604,17 @@ textColorFillBtn.addEventListener("click", function(){
 				if(textColorDiv) {
 					textColorDiv = false;
 					document.querySelector(".text-color-options").remove();
+					textColorFillBtn.classList.remove("selected");
 				} else {
 
 					if(document.querySelector(".colors-options")){
 						document.querySelector(".colors-options").remove();
 						bgColorDiv = false;
+						colorFillBtn.classList.remove("selected");
 					}
 					textColorDiv = true;
 					menuOptionsSection.append(div);
+					textColorFillBtn.classList.add("selected");
 
 					let allColorsBtn = document.querySelectorAll(".colors-options>div .color");
 
@@ -683,3 +689,16 @@ function pasteFunc() {
 		text.then(txt => { lastCell.innerText = txt; });
 	}
 }
+
+let menuOptionsSection = document.querySelector(".menu-options-section");
+menuOptionsSection.addEventListener("scroll", function(){
+	if(document.querySelector(".text-color-options")){
+		document.querySelector(".text-color-options").remove();
+		textColorFillBtn.classList.remove("selected");
+		textColorDiv = false;
+	}else if(document.querySelector(".colors-options")) {
+		document.querySelector(".colors-options").remove();
+		colorFillBtn.classList.remove("selected");
+		bgColorDiv = false;
+	}
+});
