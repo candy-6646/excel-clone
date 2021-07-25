@@ -39,48 +39,33 @@
 
 		<div class="logo-image"></div>
 
-		<div class="navigation">
-			
-			<div class="title-section">
+
+		<div class="title-section">
 				
-				<div contenteditable="true" class="title" title="Edit" data-bs-toggle="tooltip" data-bs-placement="bottom" spellCheck="false">Untitled Spreadsheet</div>
-
-			</div>
-
-
-			<div class="menu-bar-section">
-
-				<div>File</div>
-				<div>View</div>
-				<div>Tools</div>
-				<div>Help</div>
-
-			</div>
-
-
-
-
-			
+			<div contenteditable="true" class="title" data-bs-toggle="tooltip" data-bs-placement="bottom" spellCheck="false">Untitled Spreadsheet</div>
 
 		</div>
 
+
+		<div class="menu-bar-section">
+
+			<div>File</div>
+			<div>Home</div>
+			<div data-bs-toggle="modal" data-bs-target="#staticBackdrop">Help</div>
+
+		</div>
+	
+
+	
+
+
+
 		<div class="menu-options-section">
+			<div class="menu-options-icon material-icons" onclick="cutFunc()" >content_cut</div>
+			<div class="menu-options-icon material-icons" onclick="copyFunc()">content_copy</div>
+			<div class="menu-options-icon material-icons ccc" onclick="pasteFunc()">content_paste</div>
 
-			<div class="menu-options-icon material-icons boldBtn">format_bold</div>
-			<div class="menu-options-icon material-icons italicBtn">format_italic</div>
-			<div class="menu-options-icon material-icons underlineBtn">format_underlined</div>
-
-			<div class="menu-options-icon material-icons color-fill">
-			    format_color_fill
-			</div>			
-			<div class="menu-options-icon material-icons text-color">format_color_text</div>
-			
-			<div class="menu-options-icon material-icons align left">format_align_left</div>
-			<div class="menu-options-icon material-icons align center">format_align_center</div>
-			<div class="menu-options-icon material-icons align right">format_align_right</div>
-
-			<select name="font-style" class="font-menu font-style" title="font" data-bs-toggle="tooltip" data-bs-placement="bottom">
-				<option class="options f1" value="f1">Noto Sans</option>
+			<select name="font-style" class="font-menu font-style">
 				<option class="options f2" value="f2">Arial</option>
 				<option class="options f3" value="f3">Caladea</option>
 				<option class="options f4" value="f4">Comic</option>
@@ -92,7 +77,7 @@
 				<option class="options f10" value="f10">Zen Tokyo Zoo
 				</option>
 			</select>
-			<select name="font-size" class="font-menu font-size" title="font-size" data-bs-toggle="tooltip" data-bs-placement="bottom">
+			<select name="font-size" class="font-menu font-size">
 				<option class="options" value="8">8</option>
 				<option class="options" value="10">10</option>
 				<option class="options" value="12">12</option>
@@ -103,9 +88,25 @@
 			</select>
 
 
-			<div class="menu-options-icon material-icons" onclick="cutFunc()" >content_cut</div>
-			<div class="menu-options-icon material-icons" onclick="copyFunc()">content_copy</div>
-			<div class="menu-options-icon material-icons" onclick="pasteFunc()">content_paste</div>
+			<div class="menu-options-icon material-icons textFormat bold">format_bold</div>
+			<div class="menu-options-icon material-icons textFormat italic">format_italic</div>
+			<div class="menu-options-icon material-icons textFormat underline">format_underlined</div>
+
+			<div class="menu-options-icon material-icons color-fill">
+			    format_color_fill
+			    <input type="color" name="bg-color-fill">
+			</div>			
+			<div class="menu-options-icon material-icons color-fill">
+				format_color_text
+				<input type="color" name="text-color-fill">
+			</div>
+			
+			<div class="menu-options-icon material-icons align left">format_align_left</div>
+			<div class="menu-options-icon material-icons align center">format_align_center</div>
+			<div class="menu-options-icon material-icons align right">format_align_right</div>
+
+
+
 			
 
 
@@ -146,32 +147,66 @@
 
 
 
-        <!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-share-square-o" aria-hidden="true"></i> Share with people and groups
-				</h5>
-		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		      </div>
-		      <div class="modal-body">
-		        <input type="text" value="https://www.pepcoding.com/" id="myInput">
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary" onclick="myFunction()"><span class="material-icons">content_copy</span></button>
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
 
 
 	</div>
 
+
+	<!-- Button trigger modal -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">Help</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Welcome to excel clone.</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> You can put data inside each cell, the data can be anything you want, like: number or text.</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>You can apply your own styling on each cell by using menu options.</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>You can apply formula on a cell by using formula bar.</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>To apply formula on a cell, the format is => (3C1)  or  (A1 + B1)  or  (3*A1 + 9*B2).</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Formula bar is on right side of fx.</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>To add notes click on tools button then click on note.</p>
+	        </div>
+
+	        <div class="help-options">
+	        	<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>To save a file click on File button an then click on Save.</p>
+	        </div>
+
+	      </div>
+	      <div class="modal-footer" style="justify-content: center; font-weight:bold;">
+	        <p>Developed by Kundan Kumar</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
 	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="script2.js"></script>
+	<script type="text/javascript" src="styleScript.js"></script>
 
 </body>
 </html>
